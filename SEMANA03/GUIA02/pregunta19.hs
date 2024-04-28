@@ -1,9 +1,21 @@
 estaLetraEnString :: Char -> [Char] -> Bool
-estaLetraEnString
+estaLetraEnString  num lista =
+    if null lista
+        then
+            False
+        else
+            if num == (head lista)
+                then True
+                else
+                    estaLetraEnString num (tail lista)
 
 esVocal :: Char -> Bool
 esVocal c =
     if or [c == 'a', c == 'e', c == 'i', c == 'o', c == 'u']
+        then
+            True
+        else
+            False
 
 listaVocales' :: String -> [Char]
 listaVocales' cadena = listaVocales cadena []
