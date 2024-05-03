@@ -14,13 +14,21 @@ alumnosMatriculados :: [Curso] -> String -> Int
 alumnosMatriculados listaCursos carrera = sum [x | (c, _, _, x, _) <- listaCursos, c == carrera]
 
 -- B
-cursoCarreraArea :: [Curso] -> String -> String -> [Float]
-cursoCarreraArea listaCursos carrera area = 
-    [ porcentaje | (c, a, _, _, porcentaje) <- listaCursos, c == carrera, a == area]
+porcentajeCurso :: Curso -> String -> String -> Float
+porcentajeCurso listaCursos carrera area
+    | [ porcentaje | (c, a, _, _, porcentaje) <- listaCursos, c == carrera && a == area] = porcentaje
 
-cursoConMayorDesaprobados :: [Float] -> Float -> Float
-cursoConMayorDesaprobados [] mayor = mayor
-cursoConMayorDesaprobados (x:xs) mayor
-    | x > mayor = cursoConMayorDesaprobados xs x
-    | otherwise = cursoConMayorDesaprobados xs mayor
+-- cursoConMayorDesaprobados :: [Curso] -> String -> String -> Float -> Float
+-- cursoConMayorDesaprobados listaCursos carrera area mayor =
+--     if null listaCursos
+--         then
+--             mayor
+--         else
+--             cursoConMayorDesaprobados
+--             (tail listaCursos)
+--             carrera
+--             area
+--             if (mayor > )
+    
+
 
