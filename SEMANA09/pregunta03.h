@@ -1,0 +1,1 @@
+bool verSiEsPositivo(int* numero);
