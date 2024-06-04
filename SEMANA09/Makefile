@@ -1,9 +1,9 @@
 all: build
 
 build:
-	g++ -c pregunta06.cpp
+	g++ -c pregunta13.cpp
 	g++ -c main.cpp
-	g++ pregunta06.o main.o -o main
+	g++ pregunta13.o main.o -o main
 	@echo "Ejecutando..."
 	.\main.exe
 

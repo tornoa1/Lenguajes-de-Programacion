@@ -1,15 +1,20 @@
-#include "pregunta01.h"
-#include "pregunta03.h"
-#include "pregunta06.h"
 #include <iostream>
+#include "pregunta13.h"
 
 int main(){
-    int* arregloGenerado =
-        generarArreglo(5);
-    imprimirArreglo(arregloGenerado, 5);
-    imprimirArregloBackward(arregloGenerado, 5);
-    arregloGenerado = agregarNumero(arregloGenerado, 5, 30);
-    imprimirArreglo(arregloGenerado, 6);
+    // PREGUNTA 10
+    // int num1 = 10;
+    // int num2 = 20;
+    // int respuesta = 0;
+    // operar(num1, num2, &respuesta);
+
+    // std :: cout << respuesta;
+
+    int* arr = inputArreglo(5);
+    printArreglo(arr, 5);
     
+    int* arr2 = generateArreglo(5);
+    printArreglo(arr2, 5);
+
     return 0;
 }
