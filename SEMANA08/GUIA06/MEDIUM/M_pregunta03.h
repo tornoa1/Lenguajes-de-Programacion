@@ -1,0 +1,1 @@
+double areaTriangulo(int base, int altura);

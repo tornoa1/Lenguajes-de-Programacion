@@ -1,0 +1,1 @@
+double areaRectangulo(int largo, int ancho);
