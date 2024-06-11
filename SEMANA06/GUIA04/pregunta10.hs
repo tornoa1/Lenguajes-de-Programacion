@@ -3,4 +3,6 @@
 
 listaEmpleados :: [(String, Int)] = [("Jaime",2000),("Luis",1000),("Renato",4000),("Cuto",10000)]
 
-empleadosMenorSueldo :: [(String, Int)]
+empleadosMenorSueldo :: [(String, Int)] -> [String]
+empleadosMenorSueldo listaEmpleados =
+    map (\(nombre, _) -> nombre) (filter (\(_, sueldo) -> sueldo > 1025) listaEmpleados)
